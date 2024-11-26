@@ -1,4 +1,4 @@
-package hw_5;
+package hw_5_1;
 
 public class RunnableClass implements Runnable {
 	private String[] messages;
