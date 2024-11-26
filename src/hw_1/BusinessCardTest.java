@@ -29,13 +29,15 @@ class BusinessCardTest {
     void createCard() throws IOException {
         String myTestInfo = "Ivan Petrov\nivan@example.com\nUASG\nswimming\n";
         String expected =
-                "BEGIN:VCARD\n" +
-                "VERSION:4.0\n" +
-                "FN:Ivan Petrov\n" +
-                "EMAIL;TYPE=work:ivan@example.com\n" +
-                "ORG:UASG\n" +
-                "NOTE: I am interested in swimming\n" +
-                "END:VCARD\n";
+                """
+                        BEGIN:VCARD
+                        VERSION:4.0
+                        FN:Ivan Petrov
+                        EMAIL;TYPE=work:ivan@example.com
+                        ORG:UASG
+                        NOTE: I am interested in swimming
+                        END:VCARD
+                        """;
 
         InputStream inputStream = new ByteArrayInputStream(myTestInfo.getBytes());
 
