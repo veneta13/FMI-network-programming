@@ -34,15 +34,16 @@ public class SimpleEchoServer {
 
     public void echo(Socket client) {
         try {
-            InputStream in = client.getInputStream();
-            OutputStream out = client.getOutputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-            PrintWriter writer = new PrintWriter(out, true);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            PrintWriter writer = new PrintWriter(client.getOutputStream(), true);
 
             String line;
             while ((line = reader.readLine()) != null) {
                 writer.println(line);
             }
+
+            reader.close();
+            writer.close();
         }
         catch (IOException e) {
             System.out.println(e);
