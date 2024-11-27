@@ -6,7 +6,7 @@ public class FunctionClass {
     private static List<Student> studentClass;
 
     public static void main(String[] args) {
-        studentClass = new LinkedList<Student>();
+        studentClass = new LinkedList<>();
         addStudents();
         Collections.sort(studentClass);
         printStudents();
