@@ -10,7 +10,7 @@ public class BusinessCard {
             file.write(nameBytes);
             file.write("\n".getBytes());
         } catch (IOException e) {
-            System.out.println(e.toString());
+            System.out.println(e.getMessage());
         }
     }
 
@@ -31,7 +31,7 @@ public class BusinessCard {
             writeText(outputFile, "END:VCARD");
 
         } catch (IOException e) {
-            System.out.println(e.toString());
+            System.out.println(e.getMessage());
         }
     }
 

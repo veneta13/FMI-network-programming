@@ -39,7 +39,7 @@ public class SimpleEchoClient {
             writer = new PrintWriter(socket.getOutputStream(), true);
         }
         catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 
@@ -50,7 +50,7 @@ public class SimpleEchoClient {
             socket.close();
         }
         catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 
@@ -70,7 +70,7 @@ public class SimpleEchoClient {
             System.out.println(response);
         }
         catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
             return false;
         }
         return true;

@@ -25,7 +25,7 @@ public class URLImageDownloader {
             }
         }
         catch (RuntimeException e) {
-            System.out.println(e.toString());
+            System.out.println(e.getMessage());
         }
         finally {
             if (urlStream != null) {
