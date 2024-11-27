@@ -59,7 +59,7 @@ public class PooledConnectionHandler implements Runnable {
                         return;
                     }
                 }
-                connection = (Socket) pool.removeFirst();
+                connection = pool.removeFirst();
             }
             handleConnection();
         }
