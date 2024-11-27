@@ -6,7 +6,6 @@ import java.net.Socket;
 public class PooledEchoServer {
     private final int clientCapacity;
     private final int port;
-    private ServerSocket requestSocket;
 
     public PooledEchoServer(int port, int clientCapacity) {
         this.port = port;
@@ -29,7 +28,7 @@ public class PooledEchoServer {
     public void acceptConnections() {
         try {
             ServerSocket server = new ServerSocket(port, 5);
-            Socket client = null;
+            Socket client;
 
             while (true) {
                 client = server.accept();

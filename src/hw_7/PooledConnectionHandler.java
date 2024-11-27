@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PooledConnectionHandler implements Runnable {
     private Socket connection;
-    private static List pool = new LinkedList();
+    private static final List<Socket> pool = new LinkedList();
 
     public PooledConnectionHandler() {}
 
